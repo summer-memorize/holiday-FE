@@ -1,0 +1,47 @@
+.calendar {
+    margin-left: 25%;
+    margin-top: 5%;
+    width: 50%;
+    height: 600px;
+}
+
+.calendar-day-row {
+    display: flex;
+}
+
+.calendar-row-block {
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+
+.calendar-block {
+    flex-direction: row;
+    width: 14%;
+    height: 100%;
+    border: 1px dashed black;
+}
+
+.this-month {
+    color: black;
+    font-weight: bold;
+}
+
+.another-month {
+    color: #bcbcbc;
+    font-weight: bold;
+}
+
+.calendar-title {
+    margin-top: 3%;
+}
+
+.calendar-block-row {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.holiday {
+    background-color: #ff0000;
+}
