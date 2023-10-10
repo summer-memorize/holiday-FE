@@ -5,5 +5,4 @@ const DisuniteSlice = (array, size) => {
     }
     return result;
 }
-
 export default DisuniteSlice;
