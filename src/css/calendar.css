@@ -7,18 +7,21 @@
 
 .calendar-day-row {
     display: flex;
+    justify-content: flex-start;
 }
 
 .calendar-row-block {
+    box-sizing: border-box;
     display: flex;
+    justify-content: flex-start;
     width: 100%;
     height: 100px;
 }
 
 .calendar-block {
-    flex-direction: row;
     width: 14%;
-    height: 100%;
+
+    overflow: hidden;
     border: 1px dashed black;
 }
 
@@ -37,11 +40,10 @@
 }
 
 .calendar-block-row {
-    display: inline-block;
     width: 100%;
     height: auto;
 }
 
-.holiday {
-    background-color: #ff0000;
+.holiday-color {
+    background-color: #FFFFCC;
 }

@@ -6,7 +6,6 @@ const CalendarHolidayFetch = async (saveDate, setSaveDate, year, month, stringMo
     const queryString = new URLSearchParams({ year, month:  stringMonth }).toString();
     try {
         if(saveDate?.[year]?.[month]) return
-        console.log(year, month, saveDate[year]?.[month]);
         const response = await fetch(`${BackEndUrl}/holiday?${queryString}`, {
             method: 'GET',
             headers: { 'Content-type': 'application/json' },
@@ -25,7 +24,6 @@ const CalendarHolidayFetch = async (saveDate, setSaveDate, year, month, stringMo
             saveDate[year] ||= {[holidayMonth]: { [date]: { dateName: [holiday.dateName], isHoliday: holiday.isHoliday } } };
             if (saveDate?.[holidayYear]?.[holidayMonth]?.[date]){
                 saveDate[holidayYear][holidayMonth][date].dateName.push(holiday.dateName);
-                saveDate[holidayYear][holidayMonth][date].isHoliday ||= holiday.isHoliday;
             }
             else{
                 saveDate[holidayYear][holidayMonth] = { ...saveDate[holidayYear][holidayMonth], [date]: { dateName: [holiday.dateName], isHoliday: holiday.isHoliday } }
