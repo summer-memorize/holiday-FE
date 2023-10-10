@@ -1,3 +1,3 @@
-const BackEndUrl= "http://54.180.153.89:3001"
+const BackEndUrl= "https://54.180.153.89:3001"
 
 export default BackEndUrl;
